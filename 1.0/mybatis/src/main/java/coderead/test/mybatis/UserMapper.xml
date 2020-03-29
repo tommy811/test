@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="coderead.test.mybatis.UserMapper">
+    <cache/>
+    <parameterMap id="paramter_user" type="coderead.test.mybatis.beans.User">
+        <parameter property="name" javaType="string"/>
+    </parameterMap>
+    <resultMap id="result_user" type="coderead.test.mybatis.beans.User" autoMapping="true">
+        <id column="id" property="id"/>
+        <result column="name" property="name" jdbcType="VARCHAR" javaType="String"/>
+        <result column="create_time" property="createTime" jdbcType="DATETIMEOFFSET" javaType="date"/>
+    </resultMap>
+    <select id="selectByUser" resultMap="result_user" parameterMap="paramter_user" flushCache="true">
+        select * from users where 1=1
+        <if test="id!=null">
+            and id=#{id}
+        </if>
+        <if test="name!=null">
+            and name=#{name}
+        </if>
+
+    </select>
+
+    <update id="editUser" parameterType="coderead.test.mybatis.beans.User">
+        update users set
+        name=#{name}
+        <if test="age!=null">
+            ,
+            age=#{age}
+        </if>
+        <if test="sex!=null">
+            ,
+            sex=#{sex}
+        </if>
+        <if test="phoneNumber!=null">
+            ,
+            phone_number=#{phoneNumber}
+        </if>
+        <if test="email!=null">
+            ,
+            email=#{email}
+        </if>
+        where id=#{id}
+    </update>
+
+</mapper>

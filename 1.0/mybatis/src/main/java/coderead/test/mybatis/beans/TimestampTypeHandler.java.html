@@ -1,0 +1,32 @@
+package coderead.test.mybatis.beans;
+
+import org.apache.ibatis.type.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/type/JdbcType.java'>JdbcType</a>;
+import org.apache.ibatis.type.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/type/TypeHandler.java'>TypeHandler</a>;
+
+import java.sql.*;
+// 时间 转 整形
+public class <span class='class declaration top' name='TimestampTypeHandler'>TimestampTypeHandler</span> implements <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/type/TypeHandler.java'>TypeHandler</a> {
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public void <span class='method declaration' name='setParameter-E96EB'>setParameter</span>(<a class='class reference' href='/jre/8/java/sql/PreparedStatement.java'>PreparedStatement</a> <span class='variable declaration' position='273' >ps</span>, int <span class='variable declaration' position='281' >i</span>, <a class='class reference' href='/jre/8/java/lang/Object.java'>Object</a> <span class='variable declaration' position='291' >parameter</span>, <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/type/JdbcType.java'>JdbcType</a> <span class='variable declaration' position='311' >jdbcType</span>) throws <a class='class reference' href='/jre/8/java/sql/SQLException.java'>SQLException</a> {
+        <a class='variable access' href='#position=273'>ps</a>.<a class='method invoke' href='/jre/8/java/sql/PreparedStatement.java#method=setLong-82DA9'>setLong</a>(<a class='variable access' href='#position=281'>i</a>, ((<a class='class reference' href='/jre/8/java/sql/Date.java'>Date</a>) <a class='variable access' href='#position=291'>parameter</a>).<a class='method invoke' href='/jre/8/java/util/Date.java#method=getTime-CE257'>getTime</a>());
+    }
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public <a class='class reference' href='/jre/8/java/lang/Object.java'>Object</a> <span class='method declaration' name='getResult-094E6'>getResult</span>(<a class='class reference' href='/jre/8/java/sql/ResultSet.java'>ResultSet</a> <span class='variable declaration' position='455' >rs</span>, <a class='class reference' href='/jre/8/java/lang/String.java'>String</a> <span class='variable declaration' position='466' >columnName</span>) throws <a class='class reference' href='/jre/8/java/sql/SQLException.java'>SQLException</a> {
+        long <span class='variable declaration' position='513' >time</span> = <a class='variable access' href='#position=455'>rs</a>.<a class='method invoke' href='/jre/8/java/sql/ResultSet.java#method=getLong-9040B'>getLong</a>(<a class='variable access' href='#position=466'>columnName</a>);
+        return new <a class='method invoke' href='/jre/8/java/sql/Date.java#method=Date-FE1E0'>Date</a>(<a class='variable access' href='#position=513'>time</a>);
+    }
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public <a class='class reference' href='/jre/8/java/lang/Object.java'>Object</a> <span class='method declaration' name='getResult-A620A'>getResult</span>(<a class='class reference' href='/jre/8/java/sql/ResultSet.java'>ResultSet</a> <span class='variable declaration' position='634' >rs</span>, int <span class='variable declaration' position='642' >columnIndex</span>) throws <a class='class reference' href='/jre/8/java/sql/SQLException.java'>SQLException</a> {
+        long <span class='variable declaration' position='690' >time</span> = <a class='variable access' href='#position=634'>rs</a>.<a class='method invoke' href='/jre/8/java/sql/ResultSet.java#method=getLong-01EEA'>getLong</a>(<a class='variable access' href='#position=642'>columnIndex</a>);
+        return new <a class='method invoke' href='/jre/8/java/sql/Date.java#method=Date-FE1E0'>Date</a>(<a class='variable access' href='#position=690'>time</a>);
+    }
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public <a class='class reference' href='/jre/8/java/lang/Object.java'>Object</a> <span class='method declaration' name='getResult-693C4'>getResult</span>(<a class='class reference' href='/jre/8/java/sql/CallableStatement.java'>CallableStatement</a> <span class='variable declaration' position='820' >cs</span>, int <span class='variable declaration' position='828' >columnIndex</span>) throws <a class='class reference' href='/jre/8/java/sql/SQLException.java'>SQLException</a> {
+        long <span class='variable declaration' position='876' >time</span> = <a class='variable access' href='#position=820'>cs</a>.<a class='method invoke' href='/jre/8/java/sql/CallableStatement.java#method=getLong-01EEA'>getLong</a>(<a class='variable access' href='#position=828'>columnIndex</a>);
+        return new <a class='method invoke' href='/jre/8/java/sql/Date.java#method=Date-FE1E0'>Date</a>(<a class='variable access' href='#position=876'>time</a>);
+    }
+}

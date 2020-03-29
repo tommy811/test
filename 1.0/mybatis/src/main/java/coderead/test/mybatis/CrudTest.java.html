@@ -1,0 +1,93 @@
+package coderead.test.mybatis;
+
+import coderead.test.mybatis.beans.<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a>;
+import com.<span class=' unsolved ' name='Cannot resolve symbol 'cbtu''>cbtu</span>.<span class=' unsolved ' name='Cannot resolve symbol 'agent''>agent</span>.<span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>;
+import com.<span class=' unsolved ' name='Cannot resolve symbol 'cbtu''>cbtu</span>.<span class=' unsolved ' name='Cannot resolve symbol 'agent''>agent</span>.<span class=' unsolved ' name='Cannot resolve symbol 'jacoco''>jacoco</span>.<span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span>;
+import org.apache.ibatis.session.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a>;
+import org.apache.ibatis.session.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a>;
+import org.apache.ibatis.session.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a>;
+import org.junit.<a class='class reference' href='/lib/junit/junit/4.12/org/junit/After.java'>After</a>;
+import org.junit.<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Before.java'>Before</a>;
+import org.junit.<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>;
+
+/**
+ * @author tommy
+ * @title: CrudTest
+ * @projectName test
+ * @description: 增删改查测试
+ * @date 2020/3/295:26 PM
+ */
+public class <span class='class declaration top' name='CrudTest'>CrudTest</span> {
+
+    private <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='field declaration' name='CrudTest.sqlSession'>sqlSession</span>;
+    private <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java'>UserMapper</a> <span class='field declaration' name='CrudTest.mapper'>mapper</span>;
+
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Before.java'>Before</a>
+    public void <span class='method declaration' name='init-9ED93'>init</span>() {
+        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='664' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
+        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='739' >build</span> = <a class='variable access' href='#position=664'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/MyBatisTest.java'>MyBatisTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
+        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='850' >sqlSession</span> = <a class='variable access' href='#position=739'>build</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java#method=openSession-5B1F5'>openSession</a>(true);
+        this.<a class='field access' href='#field=CrudTest.sqlSession'>sqlSession</a> = <a class='variable access' href='#position=850'>sqlSession</a>;
+        this.<a class='field access' href='#field=CrudTest.mapper'>mapper</a>=<a class='variable access' href='#position=850'>sqlSession</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java#method=getMapper-24F25'>getMapper</a>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java'>UserMapper</a>.class);
+    }
+
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+    public void <span class='method declaration' name='insertTest-9ED93'>insertTest</span>() {
+
+        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+        /*=================测试代码区间开始========================*/
+        <a class='method invoke' href='#method=_insert-722DC'>_insert</a>();
+        /*=================测试代码区间结束========================*/
+        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("新增");
+
+    }
+
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+    public void <span class='method declaration' name='deleteTest-9ED93'>deleteTest</span>() {
+        <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='1339' >user</span> = <a class='method invoke' href='#method=_insert-722DC'>_insert</a>();
+
+        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+        /*=================测试代码区间开始========================*/
+        <a class='field access' href='#field=CrudTest.mapper'>mapper</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java#method=deleteUser-78DDE'>deleteUser</a>(<a class='variable access' href='#position=1339'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=getId-0CE9E'>getId</a>());
+        /*=================测试代码区间结束========================*/
+        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("删除");
+
+    }
+
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+    public void <span class='method declaration' name='updateTest-9ED93'>updateTest</span>() {
+        <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='1684' >user</span> = <a class='method invoke' href='#method=_insert-722DC'>_insert</a>();
+        <a class='variable access' href='#position=1684'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setName-7F5DE'>setName</a>("鲁班大叔爱代码");
+
+        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+        /*=================测试代码区间开始========================*/
+        <a class='field access' href='#field=CrudTest.mapper'>mapper</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java#method=editUser-7A82C'>editUser</a>(<a class='variable access' href='#position=1684'>user</a>);
+        /*=================测试代码区间结束========================*/
+        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("修改");
+
+        <a class='field access' href='#field=CrudTest.mapper'>mapper</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java#method=deleteUser-78DDE'>deleteUser</a>(<a class='variable access' href='#position=1684'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=getId-0CE9E'>getId</a>());
+    }
+
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+    public void <span class='method declaration' name='selectTest-9ED93'>selectTest</span>(){
+        <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='2092' >user</span> = <a class='method invoke' href='#method=_insert-722DC'>_insert</a>();
+        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+        /*=================测试代码区间开始========================*/
+        <a class='field access' href='#field=CrudTest.mapper'>mapper</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java#method=selectByUser-98B74'>selectByUser</a>(<a class='variable access' href='#position=2092'>user</a>);
+        /*=================测试代码区间结束========================*/
+        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("查询");
+        <a class='field access' href='#field=CrudTest.mapper'>mapper</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java#method=deleteUser-78DDE'>deleteUser</a>(<a class='variable access' href='#position=2092'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=getId-0CE9E'>getId</a>());
+
+    }
+    private <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='method declaration' name='_insert-722DC'>_insert</span>(){
+        <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='2457' >user</span> = new <a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=User-9ED93'>User</a>();
+        <a class='variable access' href='#position=2457'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setName-7F5DE'>setName</a>("小强");
+        <a class='variable access' href='#position=2457'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setAge-7F5DE'>setAge</a>("12");
+        <a class='variable access' href='#position=2457'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setEmail-7F5DE'>setEmail</a>("22@cbtu.com");
+        <a class='variable access' href='#position=2457'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setPhoneNumber-7F5DE'>setPhoneNumber</a>("111222333");
+        <a class='variable access' href='#position=2457'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setSex-7F5DE'>setSex</a>("男");
+        <a class='field access' href='#field=CrudTest.mapper'>mapper</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java#method=addUser-7A82C'>addUser</a>(<a class='variable access' href='#position=2457'>user</a>);
+        return <a class='variable access' href='#position=2457'>user</a>;
+    }
+
+}
