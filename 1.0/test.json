@@ -1,0 +1,504 @@
+{
+  "name": "AbstractApplicationContext",
+  "packageName": "org.springframework.context.support",
+  "type": "public abstract  class",
+  "extend": null,
+  "implement": [
+    "org.springframework.context.ConfigurableApplicationContext"
+  ],
+  "fields": [
+    {
+      "name": "String:APPLICATION_EVENT_MULTICASTER_BEAN_NAME",
+      "type": "public static final  field",
+      "sign": "APPLICATION_EVENT_MULTICASTER_BEAN_NAME"
+    },
+    {
+      "name": "String:LIFECYCLE_PROCESSOR_BEAN_NAME",
+      "type": "public static final  field",
+      "sign": "LIFECYCLE_PROCESSOR_BEAN_NAME"
+    },
+    {
+      "name": "String:MESSAGE_SOURCE_BEAN_NAME",
+      "type": "public static final  field",
+      "sign": "MESSAGE_SOURCE_BEAN_NAME"
+    },
+    {
+      "name": "AtomicBoolean:active",
+      "type": "private final  field",
+      "sign": "active"
+    },
+    {
+      "name": "ApplicationEventMulticaster:applicationEventMulticaster",
+      "type": "private  field",
+      "sign": "applicationEventMulticaster"
+    },
+    {
+      "name": "Set<ApplicationListener<?>>:applicationListeners",
+      "type": "private final  field",
+      "sign": "applicationListeners"
+    },
+    {
+      "name": "List<BeanFactoryPostProcessor>:beanFactoryPostProcessors",
+      "type": "private final  field",
+      "sign": "beanFactoryPostProcessors"
+    },
+    {
+      "name": "AtomicBoolean:closed",
+      "type": "private final  field",
+      "sign": "closed"
+    },
+    {
+      "name": "String:displayName",
+      "type": "private  field",
+      "sign": "displayName"
+    },
+    {
+      "name": "Set<ApplicationEvent>:earlyApplicationEvents",
+      "type": "private  field",
+      "sign": "earlyApplicationEvents"
+    },
+    {
+      "name": "String:id",
+      "type": "private  field",
+      "sign": "id"
+    },
+    {
+      "name": "LifecycleProcessor:lifecycleProcessor",
+      "type": "private  field",
+      "sign": "lifecycleProcessor"
+    },
+    {
+      "name": "MessageSource:messageSource",
+      "type": "private  field",
+      "sign": "messageSource"
+    },
+    {
+      "name": "ApplicationContext:parent",
+      "type": "private  field",
+      "sign": "parent"
+    },
+    {
+      "name": "Thread:shutdownHook",
+      "type": "private  field",
+      "sign": "shutdownHook"
+    },
+    {
+      "name": "long:startupDate",
+      "type": "private  field",
+      "sign": "startupDate"
+    },
+    {
+      "name": "Object:startupShutdownMonitor",
+      "type": "private final  field",
+      "sign": "startupShutdownMonitor"
+    }
+  ],
+  "methods": [
+    {
+      "name": "AbstractApplicationContext():void",
+      "sign": "AbstractApplicationContext-9ED93",
+      "type": "public  method"
+    },
+    {
+      "name": "AbstractApplicationContext(ApplicationContext):void",
+      "sign": "AbstractApplicationContext-7655D",
+      "type": "public  method"
+    },
+    {
+      "name": "addApplicationListener(ApplicationListener<?>):void",
+      "sign": "addApplicationListener-BA732",
+      "type": "public  method"
+    },
+    {
+      "name": "addBeanFactoryPostProcessor(BeanFactoryPostProcessor):void",
+      "sign": "addBeanFactoryPostProcessor-75D1C",
+      "type": "public  method"
+    },
+    {
+      "name": "assertBeanFactoryActive():void",
+      "sign": "assertBeanFactoryActive-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "cancelRefresh(BeansException):void",
+      "sign": "cancelRefresh-B86FA",
+      "type": "protected  method"
+    },
+    {
+      "name": "close():void",
+      "sign": "close-9ED93",
+      "type": "public  method"
+    },
+    {
+      "name": "closeBeanFactory():void",
+      "sign": "closeBeanFactory-9ED93",
+      "type": "protected abstract  method"
+    },
+    {
+      "name": "containsBean(String):boolean",
+      "sign": "containsBean-E62C0",
+      "type": "public  method"
+    },
+    {
+      "name": "containsBeanDefinition(String):boolean",
+      "sign": "containsBeanDefinition-E62C0",
+      "type": "public  method"
+    },
+    {
+      "name": "containsLocalBean(String):boolean",
+      "sign": "containsLocalBean-E62C0",
+      "type": "public  method"
+    },
+    {
+      "name": "destroy():void",
+      "sign": "destroy-9ED93",
+      "type": "public  method deprecated"
+    },
+    {
+      "name": "destroyBeans():void",
+      "sign": "destroyBeans-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "doClose():void",
+      "sign": "doClose-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "findAnnotationOnBean(String,Class<A>):A",
+      "sign": "findAnnotationOnBean-6C76E",
+      "type": "public  method"
+    },
+    {
+      "name": "finishBeanFactoryInitialization(ConfigurableListableBeanFactory):void",
+      "sign": "finishBeanFactoryInitialization-07252",
+      "type": "protected  method"
+    },
+    {
+      "name": "finishRefresh():void",
+      "sign": "finishRefresh-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "getAliases(String):String[]",
+      "sign": "getAliases-96C92",
+      "type": "public  method"
+    },
+    {
+      "name": "getApplicationEventMulticaster():ApplicationEventMulticaster",
+      "sign": "getApplicationEventMulticaster-175F9",
+      "type": " method"
+    },
+    {
+      "name": "getApplicationListeners():Collection<ApplicationListener<?>>",
+      "sign": "getApplicationListeners-361E6",
+      "type": "public  method"
+    },
+    {
+      "name": "getApplicationName():String",
+      "sign": "getApplicationName-B5BA3",
+      "type": "public  method"
+    },
+    {
+      "name": "getAutowireCapableBeanFactory():AutowireCapableBeanFactory",
+      "sign": "getAutowireCapableBeanFactory-8F976",
+      "type": "public  method"
+    },
+    {
+      "name": "getBean(String):Object",
+      "sign": "getBean-050B9",
+      "type": "public  method"
+    },
+    {
+      "name": "getBean(String,Class<T>):T",
+      "sign": "getBean-5AD92",
+      "type": "public  method"
+    },
+    {
+      "name": "getBean(String,Object[]):Object",
+      "sign": "getBean-16A59",
+      "type": "public  method"
+    },
+    {
+      "name": "getBean(Class<T>):T",
+      "sign": "getBean-9513F",
+      "type": "public  method"
+    },
+    {
+      "name": "getBean(Class<T>,Object[]):T",
+      "sign": "getBean-92057",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeanDefinitionCount():int",
+      "sign": "getBeanDefinitionCount-60D78",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeanDefinitionNames():String[]",
+      "sign": "getBeanDefinitionNames-A4C10",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeanFactory():ConfigurableListableBeanFactory",
+      "sign": "getBeanFactory-12DB5",
+      "type": "public abstract  method"
+    },
+    {
+      "name": "getBeanFactoryPostProcessors():List<BeanFactoryPostProcessor>",
+      "sign": "getBeanFactoryPostProcessors-91B82",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeanNamesForAnnotation(Class<? extends Annotation>):String[]",
+      "sign": "getBeanNamesForAnnotation-2432F",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeanNamesForType(Class<?>):String[]",
+      "sign": "getBeanNamesForType-2432F",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeanNamesForType(Class<?>,boolean,boolean):String[]",
+      "sign": "getBeanNamesForType-DC274",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeanProvider(Class<T>):ObjectProvider<T>",
+      "sign": "getBeanProvider-3CD46",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeansOfType(Class<T>):Map<String,T>",
+      "sign": "getBeansOfType-6E60C",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeansOfType(Class<T>,boolean,boolean):Map<String,T>",
+      "sign": "getBeansOfType-99134",
+      "type": "public  method"
+    },
+    {
+      "name": "getBeansWithAnnotation(Class<? extends Annotation>):Map<String,Object>",
+      "sign": "getBeansWithAnnotation-6E60C",
+      "type": "public  method"
+    },
+    {
+      "name": "getDisplayName():String",
+      "sign": "getDisplayName-B5BA3",
+      "type": "public  method"
+    },
+    {
+      "name": "getId():String",
+      "sign": "getId-B5BA3",
+      "type": "public  method"
+    },
+    {
+      "name": "getInternalParentBeanFactory():BeanFactory",
+      "sign": "getInternalParentBeanFactory-28D4C",
+      "type": "protected  method"
+    },
+    {
+      "name": "getInternalParentMessageSource():MessageSource",
+      "sign": "getInternalParentMessageSource-1943C",
+      "type": "protected  method"
+    },
+    {
+      "name": "getLifecycleProcessor():LifecycleProcessor",
+      "sign": "getLifecycleProcessor-59AD2",
+      "type": " method"
+    },
+    {
+      "name": "getMessage(String,Object[],String,Locale):String",
+      "sign": "getMessage-380BE",
+      "type": "public  method"
+    },
+    {
+      "name": "getMessage(String,Object[],Locale):String",
+      "sign": "getMessage-43340",
+      "type": "public  method"
+    },
+    {
+      "name": "getMessage(MessageSourceResolvable,Locale):String",
+      "sign": "getMessage-FC5A3",
+      "type": "public  method"
+    },
+    {
+      "name": "getMessageSource():MessageSource",
+      "sign": "getMessageSource-1943C",
+      "type": "private  method"
+    },
+    {
+      "name": "getParent():ApplicationContext",
+      "sign": "getParent-748A2",
+      "type": "public  method"
+    },
+    {
+      "name": "getParentBeanFactory():BeanFactory",
+      "sign": "getParentBeanFactory-28D4C",
+      "type": "public  method"
+    },
+    {
+      "name": "getStartupDate():long",
+      "sign": "getStartupDate-CE257",
+      "type": "public  method"
+    },
+    {
+      "name": "getType(String):Class<?>",
+      "sign": "getType-26956",
+      "type": "public  method"
+    },
+    {
+      "name": "initApplicationEventMulticaster():void",
+      "sign": "initApplicationEventMulticaster-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "initLifecycleProcessor():void",
+      "sign": "initLifecycleProcessor-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "initMessageSource():void",
+      "sign": "initMessageSource-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "initPropertySources():void",
+      "sign": "initPropertySources-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "invokeBeanFactoryPostProcessors(ConfigurableListableBeanFactory):void",
+      "sign": "invokeBeanFactoryPostProcessors-07252",
+      "type": "protected  method"
+    },
+    {
+      "name": "isActive():boolean",
+      "sign": "isActive-43F74",
+      "type": "public  method"
+    },
+    {
+      "name": "isPrototype(String):boolean",
+      "sign": "isPrototype-E62C0",
+      "type": "public  method"
+    },
+    {
+      "name": "isRunning():boolean",
+      "sign": "isRunning-43F74",
+      "type": "public  method"
+    },
+    {
+      "name": "isSingleton(String):boolean",
+      "sign": "isSingleton-E62C0",
+      "type": "public  method"
+    },
+    {
+      "name": "isTypeMatch(String,Class<?>):boolean",
+      "sign": "isTypeMatch-AA9C6",
+      "type": "public  method"
+    },
+    {
+      "name": "obtainFreshBeanFactory():ConfigurableListableBeanFactory",
+      "sign": "obtainFreshBeanFactory-12DB5",
+      "type": "protected  method"
+    },
+    {
+      "name": "onClose():void",
+      "sign": "onClose-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "onRefresh():void",
+      "sign": "onRefresh-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "postProcessBeanFactory(ConfigurableListableBeanFactory):void",
+      "sign": "postProcessBeanFactory-07252",
+      "type": "protected  method"
+    },
+    {
+      "name": "prepareBeanFactory(ConfigurableListableBeanFactory):void",
+      "sign": "prepareBeanFactory-07252",
+      "type": "protected  method"
+    },
+    {
+      "name": "prepareRefresh():void",
+      "sign": "prepareRefresh-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "publishEvent(ApplicationEvent):void",
+      "sign": "publishEvent-3E7C3",
+      "type": "public  method"
+    },
+    {
+      "name": "publishEvent(Object):void",
+      "sign": "publishEvent-C888E",
+      "type": "public  method"
+    },
+    {
+      "name": "refresh():void",
+      "sign": "refresh-9ED93",
+      "type": "public  method"
+    },
+    {
+      "name": "refreshBeanFactory():void",
+      "sign": "refreshBeanFactory-9ED93",
+      "type": "protected abstract  method"
+    },
+    {
+      "name": "registerBeanPostProcessors(ConfigurableListableBeanFactory):void",
+      "sign": "registerBeanPostProcessors-07252",
+      "type": "protected  method"
+    },
+    {
+      "name": "registerListeners():void",
+      "sign": "registerListeners-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "registerShutdownHook():void",
+      "sign": "registerShutdownHook-9ED93",
+      "type": "public  method"
+    },
+    {
+      "name": "resetCommonCaches():void",
+      "sign": "resetCommonCaches-9ED93",
+      "type": "protected  method"
+    },
+    {
+      "name": "setDisplayName(String):void",
+      "sign": "setDisplayName-7F5DE",
+      "type": "public  method"
+    },
+    {
+      "name": "setId(String):void",
+      "sign": "setId-7F5DE",
+      "type": "public  method"
+    },
+    {
+      "name": "setParent(ApplicationContext):void",
+      "sign": "setParent-7655D",
+      "type": "public  method"
+    },
+    {
+      "name": "start():void",
+      "sign": "start-9ED93",
+      "type": "public  method"
+    },
+    {
+      "name": "stop():void",
+      "sign": "stop-9ED93",
+      "type": "public  method"
+    },
+    {
+      "name": "toString():String",
+      "sign": "toString-B5BA3",
+      "type": "public  method"
+    }
+  ],
+  "inner": []
+}

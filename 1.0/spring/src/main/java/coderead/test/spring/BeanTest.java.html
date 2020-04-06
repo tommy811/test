@@ -1,0 +1,37 @@
+package coderead.test.spring;
+
+import coderead.test.services.<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java'>UserService</a>;
+import com.<span class=' unsolved ' name='Cannot resolve symbol 'cbtu''>cbtu</span>.<span class=' unsolved ' name='Cannot resolve symbol 'agent''>agent</span>.<span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>;
+import com.<span class=' unsolved ' name='Cannot resolve symbol 'cbtu''>cbtu</span>.<span class=' unsolved ' name='Cannot resolve symbol 'agent''>agent</span>.<span class=' unsolved ' name='Cannot resolve symbol 'jacoco''>jacoco</span>.<span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span>;
+import org.junit.<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Before.java'>Before</a>;
+import org.junit.<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>;
+import org.springframework.context.support.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/support/ClassPathXmlApplicationContext.java'>ClassPathXmlApplicationContext</a>;
+
+/**
+ * @author tommy
+ * @title: BeanTest
+ * @projectName test
+ * @description: Bean实例测试
+ * @date 2020/4/48:22 PM
+ */
+public class <span class='class declaration top' name='BeanTest'>BeanTest</span> {
+    private <a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/support/ClassPathXmlApplicationContext.java'>ClassPathXmlApplicationContext</a> <span class='field declaration' name='BeanTest.context'>context</span>;
+
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Before.java'>Before</a>
+    public void <span class='method declaration' name='init-9ED93'>init</span>(){
+         <a class='field access' href='#field=BeanTest.context'>context</a>=
+                new <a class='method invoke' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/support/ClassPathXmlApplicationContext.java#method=ClassPathXmlApplicationContext-7F5DE'>ClassPathXmlApplicationContext</a>("spring.xml");
+    }
+
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+    public void <span class='method declaration' name='getBean-9ED93'>getBean</span>(){
+        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+        /*=================测试代码区间开始========================*/
+        <a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java'>UserService</a> <span class='variable declaration' position='784' >userService</span> = <a class='field access' href='#field=BeanTest.context'>context</a>.<a class='method invoke' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/support/AbstractApplicationContext.java#method=getBean-6150C'>getBean</a>(<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java'>UserService</a>.class);
+        <a class='variable access' href='#position=784'>userService</a>.<a class='method invoke' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java#method=getUser-337A7'>getUser</a>(1);
+        /*=================测试代码区间结束========================*/
+        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'printStack''>printStack</span>(<a class='class reference' href='/jre/8/java/lang/System.java'>System</a>.<a class='field access' href='/jre/8/java/lang/System.java#field=System.out'>out</a>);
+//        stackSession.saveCase("获取Bean");
+    }
+
+}

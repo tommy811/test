@@ -1,0 +1,55 @@
+package coderead.test.spring.services;
+
+import coderead.test.beans.<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a>;
+import coderead.test.services.<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java'>UserService</a>;
+import org.springframework.beans.factory.annotation.<a class='class reference' href='/lib/org.springframework/spring-beans/5.1.0.RELEASE/org/springframework/beans/factory/annotation/Autowired.java'>Autowired</a>;
+import org.springframework.context.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/ApplicationContext.java'>ApplicationContext</a>;
+
+/**
+ * @author tommy
+ * @title: UserService
+ * @projectName test
+ * @description: 用户服务
+ * @date 2020/4/110:39 AM
+ */
+//@Service
+public class <span class='class declaration top' name='UserServiceImpl'>UserServiceImpl</span> implements <a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java'>UserService</a>  {
+
+    private <a class='class reference' href='/jre/8/java/lang/String.java'>String</a> <span class='field declaration' name='UserServiceImpl.name'>name</span>;
+
+    @<a class='class reference' href='/lib/org.springframework/spring-beans/5.1.0.RELEASE/org/springframework/beans/factory/annotation/Autowired.java'>Autowired</a>
+    <a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/ApplicationContext.java'>ApplicationContext</a> <span class='field declaration' name='UserServiceImpl.context'>context</span>; // 依赖自动注入
+
+    final <a class='class reference' href='/p/test/1.0/spring/src/main/java/coderead/test/spring/services/ListenerBean.java'>ListenerBean</a> <span class='field declaration' name='UserServiceImpl.listenerBean'>listenerBean</span>;
+
+    // 构造函数依赖注入
+    public <span class='method declaration' name='UserServiceImpl-F40F6'>UserServiceImpl</span>(<a class='class reference' href='/p/test/1.0/spring/src/main/java/coderead/test/spring/services/ListenerBean.java'>ListenerBean</a> <span class='variable declaration' position='597' >lifecycleBean</span>) {
+        <a class='class reference' href='/jre/8/java/lang/System.java'>System</a>.<a class='field access' href='/jre/8/java/lang/System.java#field=System.out'>out</a>.<a class='method invoke' href='/jre/8/java/io/PrintStream.java#method=println-7F5DE'>println</a>("创建Bean");
+        this.<a class='field access' href='#field=UserServiceImpl.listenerBean'>listenerBean</a>=<a class='variable access' href='#position=597'>lifecycleBean</a>;
+    }
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public <a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a> <span class='method declaration' name='getUser-337A7'>getUser</span>(<a class='class reference' href='/jre/8/java/lang/Integer.java'>Integer</a> <span class='variable declaration' position='746' >id</span>) {
+        <a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a> <span class='variable declaration' position='765' >user</span>=new <a class='method invoke' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java#method=User-9ED93'>User</a>();
+        <a class='variable access' href='#position=765'>user</a>.<a class='method invoke' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java#method=setName-7F5DE'>setName</a>(<a class='field access' href='#field=UserServiceImpl.name'>name</a>);
+        return <a class='variable access' href='#position=765'>user</a>;
+    }
+
+    public <a class='class reference' href='/jre/8/java/lang/String.java'>String</a> <span class='method declaration' name='getName-B5BA3'>getName</span>() {
+        return <a class='field access' href='#field=UserServiceImpl.name'>name</a>;
+    }
+
+    public void <span class='method declaration' name='setName-7F5DE'>setName</span>(<a class='class reference' href='/jre/8/java/lang/String.java'>String</a> <span class='variable declaration' position='927' >name</span>) {
+        this.<a class='field access' href='#field=UserServiceImpl.name'>name</a> = <a class='variable access' href='#position=927'>name</a>;
+    }
+
+    public <a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/ApplicationContext.java'>ApplicationContext</a> <span class='method declaration' name='getContext-748A2'>getContext</span>() {
+        return <a class='field access' href='#field=UserServiceImpl.context'>context</a>;
+    }
+
+    public void <span class='method declaration' name='setContext-7655D'>setContext</span>(<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/ApplicationContext.java'>ApplicationContext</a> <span class='variable declaration' position='1090' >context</span>) {
+        this.<a class='field access' href='#field=UserServiceImpl.context'>context</a> = <a class='variable access' href='#position=1090'>context</a>;
+    }
+
+
+}

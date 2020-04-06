@@ -1,0 +1,45 @@
+package coderead.test.spring.services;
+
+import org.springframework.beans.<a class='class reference' href='/lib/org.springframework/spring-beans/5.1.0.RELEASE/org/springframework/beans/BeansException.java'>BeansException</a>;
+import org.springframework.beans.factory.<a class='class reference' href='/lib/org.springframework/spring-beans/5.1.0.RELEASE/org/springframework/beans/factory/InitializingBean.java'>InitializingBean</a>;
+import org.springframework.context.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/ApplicationContext.java'>ApplicationContext</a>;
+import org.springframework.context.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/ApplicationContextAware.java'>ApplicationContextAware</a>;
+import org.springframework.context.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/Lifecycle.java'>Lifecycle</a>;
+import org.springframework.context.annotation.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/annotation/Lazy.java'>Lazy</a>;
+import org.springframework.stereotype.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/stereotype/Component.java'>Component</a>;
+
+/**
+ * @author tommy
+ * @title: LifecycleBean
+ * @projectName test
+ * @description: 测试常用接口如： Lifecycle、InitializingBean、ApplicationContextAware
+ * @date 2020/4/47:44 PM
+ */
+@<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/stereotype/Component.java'>Component</a>
+@<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/annotation/Lazy.java'>Lazy</a>
+public class <span class='class declaration top' name='ListenerBean'>ListenerBean</span> implements <a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/Lifecycle.java'>Lifecycle</a>, <a class='class reference' href='/lib/org.springframework/spring-beans/5.1.0.RELEASE/org/springframework/beans/factory/InitializingBean.java'>InitializingBean</a>, <a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/ApplicationContextAware.java'>ApplicationContextAware</a> {
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public void <span class='method declaration' name='start-9ED93'>start</span>() {
+        <a class='class reference' href='/jre/8/java/lang/System.java'>System</a>.<a class='field access' href='/jre/8/java/lang/System.java#field=System.out'>out</a>.<a class='method invoke' href='/jre/8/java/io/PrintStream.java#method=println-7F5DE'>println</a>("Lifecycle Bean生命周期启动");
+    }
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public void <span class='method declaration' name='stop-9ED93'>stop</span>() {
+        <a class='class reference' href='/jre/8/java/lang/System.java'>System</a>.<a class='field access' href='/jre/8/java/lang/System.java#field=System.out'>out</a>.<a class='method invoke' href='/jre/8/java/io/PrintStream.java#method=println-7F5DE'>println</a>("Lifecycle Bean生命周期停止");
+    }
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public boolean <span class='method declaration' name='isRunning-43F74'>isRunning</span>() {
+        return false;
+    }
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public void <span class='method declaration' name='afterPropertiesSet-9ED93'>afterPropertiesSet</span>() throws <a class='class reference' href='/jre/8/java/lang/Exception.java'>Exception</a> {
+        <a class='class reference' href='/jre/8/java/lang/System.java'>System</a>.<a class='field access' href='/jre/8/java/lang/System.java#field=System.out'>out</a>.<a class='method invoke' href='/jre/8/java/io/PrintStream.java#method=println-7F5DE'>println</a>("初始化Bean");
+    }
+
+    @<a class='class reference' href='/jre/8/java/lang/Override.java'>Override</a>
+    public void <span class='method declaration' name='setApplicationContext-7655D'>setApplicationContext</span>(<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/ApplicationContext.java'>ApplicationContext</a> <span class='variable declaration' position='1153' >applicationContext</span>) throws <a class='class reference' href='/lib/org.springframework/spring-beans/5.1.0.RELEASE/org/springframework/beans/BeansException.java'>BeansException</a> {
+        <a class='class reference' href='/jre/8/java/lang/System.java'>System</a>.<a class='field access' href='/jre/8/java/lang/System.java#field=System.out'>out</a>.<a class='method invoke' href='/jre/8/java/io/PrintStream.java#method=println-7F5DE'>println</a>("依赖填充 ApplicationContext");
+    }
+}
