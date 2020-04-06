@@ -1,7 +1,6 @@
 {"type":" file yml","name":"project.yml","path":"/p/test/1.0/.web-ide/project.yml","fullName":"/p/test/1.0/.web-ide/project.yml"}
 {"type":" file json","name":"index.json","path":"/p/test/1.0/.web-ide/index.json","fullName":"/p/test/1.0/.web-ide/index.json"}
 {"type":" file xml","name":"mybatis-config.xml","path":"/p/test/1.0/mybatis/target/classes/mybatis-config.xml","fullName":"/p/test/1.0/mybatis/target/classes/mybatis-config.xml"}
-{"type":" file class","name":"MyBatisTest.class","path":"/p/test/1.0/mybatis/target/classes/coderead/test/mybatis/MyBatisTest.class","fullName":"/p/test/1.0/mybatis/target/classes/coderead/test/mybatis/MyBatisTest.class"}
 {"type":" file class","name":"CrudTest.class","path":"/p/test/1.0/mybatis/target/classes/coderead/test/mybatis/CrudTest.class","fullName":"/p/test/1.0/mybatis/target/classes/coderead/test/mybatis/CrudTest.class"}
 {"type":" file class","name":"UserMapper.class","path":"/p/test/1.0/mybatis/target/classes/coderead/test/mybatis/UserMapper.class","fullName":"/p/test/1.0/mybatis/target/classes/coderead/test/mybatis/UserMapper.class"}
 {"type":" file class","name":"BasicTest.class","path":"/p/test/1.0/mybatis/target/classes/coderead/test/mybatis/BasicTest.class","fullName":"/p/test/1.0/mybatis/target/classes/coderead/test/mybatis/BasicTest.class"}
@@ -22,17 +21,39 @@
 {"type":" file properties","name":"log4j.properties","path":"/p/test/1.0/mybatis/src/main/resources/log4j.properties","fullName":"/p/test/1.0/mybatis/src/main/resources/log4j.properties"}
 {"type":" file xml","name":"UserMapper.xml","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.xml","fullName":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.xml"}
 {"type":" file xml","name":"pom.xml","path":"/p/test/1.0/pom.xml","fullName":"/p/test/1.0/pom.xml"}
+{"type":" file json","name":"test.json","path":"/p/test/1.0/test.json","fullName":"/p/test/1.0/test.json"}
+{"type":" file class","name":"User.class","path":"/p/test/1.0/common/target/classes/coderead/test/beans/User.class","fullName":"/p/test/1.0/common/target/classes/coderead/test/beans/User.class"}
+{"type":" file class","name":"UserService.class","path":"/p/test/1.0/common/target/classes/coderead/test/services/UserService.class","fullName":"/p/test/1.0/common/target/classes/coderead/test/services/UserService.class"}
+{"type":" file xml","name":"pom.xml","path":"/p/test/1.0/common/pom.xml","fullName":"/p/test/1.0/common/pom.xml"}
 {"type":" file gitignore","name":".gitignore","path":"/p/test/1.0/.gitignore","fullName":"/p/test/1.0/.gitignore"}
 {"type":" file iml","name":"test.iml","path":"/p/test/1.0/test.iml","fullName":"/p/test/1.0/test.iml"}
+{"type":" file iml","name":"spring.iml","path":"/p/test/1.0/spring/spring.iml","fullName":"/p/test/1.0/spring/spring.iml"}
+{"type":" file class","name":"BasicTest.class","path":"/p/test/1.0/spring/target/classes/coderead/test/spring/BasicTest.class","fullName":"/p/test/1.0/spring/target/classes/coderead/test/spring/BasicTest.class"}
+{"type":" file class","name":"BeanTest.class","path":"/p/test/1.0/spring/target/classes/coderead/test/spring/BeanTest.class","fullName":"/p/test/1.0/spring/target/classes/coderead/test/spring/BeanTest.class"}
+{"type":" file class","name":"ListenerBean.class","path":"/p/test/1.0/spring/target/classes/coderead/test/spring/services/ListenerBean.class","fullName":"/p/test/1.0/spring/target/classes/coderead/test/spring/services/ListenerBean.class"}
+{"type":" file class","name":"UserServiceImpl.class","path":"/p/test/1.0/spring/target/classes/coderead/test/spring/services/UserServiceImpl.class","fullName":"/p/test/1.0/spring/target/classes/coderead/test/spring/services/UserServiceImpl.class"}
+{"type":" file properties","name":"agent.properties","path":"/p/test/1.0/spring/target/classes/agent.properties","fullName":"/p/test/1.0/spring/target/classes/agent.properties"}
+{"type":" file properties","name":"app.properties","path":"/p/test/1.0/spring/target/classes/app.properties","fullName":"/p/test/1.0/spring/target/classes/app.properties"}
+{"type":" file kotlin_module","name":"spring.kotlin_module","path":"/p/test/1.0/spring/target/classes/META-INF/spring.kotlin_module","fullName":"/p/test/1.0/spring/target/classes/META-INF/spring.kotlin_module"}
+{"type":" file xml","name":"spring.xml","path":"/p/test/1.0/spring/target/classes/spring.xml","fullName":"/p/test/1.0/spring/target/classes/spring.xml"}
+{"type":" file xml","name":"pom.xml","path":"/p/test/1.0/spring/pom.xml","fullName":"/p/test/1.0/spring/pom.xml"}
+{"type":" file properties","name":"agent.properties","path":"/p/test/1.0/spring/src/main/resources/agent.properties","fullName":"/p/test/1.0/spring/src/main/resources/agent.properties"}
+{"type":" file properties","name":"app.properties","path":"/p/test/1.0/spring/src/main/resources/app.properties","fullName":"/p/test/1.0/spring/src/main/resources/app.properties"}
+{"type":" file xml","name":"spring.xml","path":"/p/test/1.0/spring/src/main/resources/spring.xml","fullName":"/p/test/1.0/spring/src/main/resources/spring.xml"}
 {"type":" file xml","name":"uiDesigner.xml","path":"/p/test/1.0/.idea/uiDesigner.xml","fullName":"/p/test/1.0/.idea/uiDesigner.xml"}
 {"type":" file xml","name":"jarRepositories.xml","path":"/p/test/1.0/.idea/jarRepositories.xml","fullName":"/p/test/1.0/.idea/jarRepositories.xml"}
 {"type":" file xml","name":"workspace.xml","path":"/p/test/1.0/.idea/workspace.xml","fullName":"/p/test/1.0/.idea/workspace.xml"}
 {"type":" file xml","name":"misc.xml","path":"/p/test/1.0/.idea/misc.xml","fullName":"/p/test/1.0/.idea/misc.xml"}
 {"type":" file xml","name":"compiler.xml","path":"/p/test/1.0/.idea/compiler.xml","fullName":"/p/test/1.0/.idea/compiler.xml"}
-{"type":"public  class","name":"TimestampTypeHandler","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/TimestampTypeHandler.java","fullName":"coderead.test.mybatis.beans.TimestampTypeHandler"}
+{"type":"public  interface","name":"UserService","path":"/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java","fullName":"coderead.test.services.UserService"}
 {"type":"public  interface","name":"UserMapper","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java","fullName":"coderead.test.mybatis.UserMapper"}
+{"type":"public  class","name":"BasicTest","path":"/p/test/1.0/spring/src/main/java/coderead/test/spring/BasicTest.java","fullName":"coderead.test.spring.BasicTest"}
+{"type":"public  class","name":"TimestampTypeHandler","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/TimestampTypeHandler.java","fullName":"coderead.test.mybatis.beans.TimestampTypeHandler"}
+{"type":"public  class","name":"User","path":"/p/test/1.0/common/src/main/java/coderead/test/beans/User.java","fullName":"coderead.test.beans.User"}
 {"type":"public  class","name":"Student","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/Student.java","fullName":"coderead.test.mybatis.beans.Student"}
+{"type":"public  class","name":"BeanTest","path":"/p/test/1.0/spring/src/main/java/coderead/test/spring/BeanTest.java","fullName":"coderead.test.spring.BeanTest"}
+{"type":"public  class","name":"UserServiceImpl","path":"/p/test/1.0/spring/src/main/java/coderead/test/spring/services/UserServiceImpl.java","fullName":"coderead.test.spring.services.UserServiceImpl"}
+{"type":"public  class","name":"ListenerBean","path":"/p/test/1.0/spring/src/main/java/coderead/test/spring/services/ListenerBean.java","fullName":"coderead.test.spring.services.ListenerBean"}
 {"type":"public  class","name":"User","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java","fullName":"coderead.test.mybatis.beans.User"}
-{"type":"public  class","name":"BasicTest","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/BasicTest.java","fullName":"coderead.test.mybatis.BasicTest"}
 {"type":"public  class","name":"CrudTest","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/CrudTest.java","fullName":"coderead.test.mybatis.CrudTest"}
-{"type":"public  class","name":"MyBatisTest","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/MyBatisTest.java","fullName":"coderead.test.mybatis.MyBatisTest"}
+{"type":"public  class","name":"BasicTest","path":"/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/BasicTest.java","fullName":"coderead.test.mybatis.BasicTest"}

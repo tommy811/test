@@ -23,7 +23,7 @@ public class BasicTest {
         StackSession stackSession = StackSessionBuild.open();
         /*=================测试代码区间开始========================*/
         SqlSessionFactoryBuilder factoryBuilder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory build = factoryBuilder.build(MyBatisTest.class.getResourceAsStream("/mybatis-config.xml"));
+        SqlSessionFactory build = factoryBuilder.build(BasicTest.class.getResourceAsStream("/mybatis-config.xml"));
         /*=================测试代码区间结束========================*/
         stackSession.saveCase("初始化");
     }
@@ -31,7 +31,7 @@ public class BasicTest {
     @Test
     public void createSession() {
         SqlSessionFactoryBuilder factoryBuilder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory build = factoryBuilder.build(MyBatisTest.class.getResourceAsStream("/mybatis-config.xml"));
+        SqlSessionFactory build = factoryBuilder.build(BasicTest.class.getResourceAsStream("/mybatis-config.xml"));
 
         StackSession stackSession = StackSessionBuild.open();
         /*=================测试代码区间开始========================*/
@@ -43,7 +43,7 @@ public class BasicTest {
     @Test
     public void closeSession() {
         SqlSessionFactoryBuilder factoryBuilder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory build = factoryBuilder.build(MyBatisTest.class.getResourceAsStream("/mybatis-config.xml"));
+        SqlSessionFactory build = factoryBuilder.build(BasicTest.class.getResourceAsStream("/mybatis-config.xml"));
         SqlSession sqlSession = build.openSession(true);
 
         select(sqlSession);
@@ -81,7 +81,7 @@ public class BasicTest {
 
     public static SqlSessionFactory getFactory(){
         SqlSessionFactoryBuilder factoryBuilder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory build = factoryBuilder.build(MyBatisTest.class.getResourceAsStream("/mybatis-config.xml"));
+        SqlSessionFactory build = factoryBuilder.build(BasicTest.class.getResourceAsStream("/mybatis-config.xml"));
         return build;
     }
     public static SqlSession buildSession(){

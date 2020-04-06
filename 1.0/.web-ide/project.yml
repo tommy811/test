@@ -3,6 +3,7 @@ version: 1.0
 jre: 8
 charset: utf-8
 modules:
+ - path: common
  - path: mybatis
    dependLibs:
      -  com.google.protobuf:protobuf-java:3.6.1
@@ -10,3 +11,16 @@ modules:
      -  mysql:mysql-connector-java:8.0.17
      -  org.hamcrest:hamcrest-core:1.3
      -  org.mybatis:mybatis:3.5.1
+ - path: spring
+   dependLibs:
+     - com.google.protobuf:protobuf-java:3.6.1
+     - junit:junit:4.12
+     - mysql:mysql-connector-java:8.0.17
+     - org.hamcrest:hamcrest-core:1.3
+     - org.mybatis:mybatis:3.5.1
+     - org.springframework:spring-aop:5.1.0.RELEASE
+     - org.springframework:spring-beans:5.1.0.RELEASE
+     - org.springframework:spring-context:5.1.0.RELEASE
+     - org.springframework:spring-core:5.1.0.RELEASE
+     - org.springframework:spring-expression:5.1.0.RELEASE
+     - org.springframework:spring-jcl:5.1.0.RELEASE

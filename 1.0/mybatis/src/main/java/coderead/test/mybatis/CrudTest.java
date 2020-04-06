@@ -25,7 +25,7 @@ public class CrudTest {
     @Before
     public void init() {
         SqlSessionFactoryBuilder factoryBuilder = new SqlSessionFactoryBuilder();
-        SqlSessionFactory build = factoryBuilder.build(MyBatisTest.class.getResourceAsStream("/mybatis-config.xml"));
+        SqlSessionFactory build = factoryBuilder.build(CrudTest.class.getResourceAsStream("/mybatis-config.xml"));
         SqlSession sqlSession = build.openSession(true);
         this.sqlSession = sqlSession;
         this.mapper=sqlSession.getMapper(UserMapper.class);
