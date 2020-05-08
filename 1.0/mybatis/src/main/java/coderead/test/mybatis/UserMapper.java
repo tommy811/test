@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
+@CacheNamespace(blocking=true)
 public interface UserMapper {
 
     @Select({" select * from users where id=#{1}"})

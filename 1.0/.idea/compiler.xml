@@ -9,6 +9,8 @@
         <module name="common" />
         <module name="mybatis" />
         <module name="spring" />
+        <module name="dubbo" />
+        <module name="cache" />
       </profile>
     </annotationProcessing>
   </component>

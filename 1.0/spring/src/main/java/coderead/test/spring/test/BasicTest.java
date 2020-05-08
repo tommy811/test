@@ -1,4 +1,4 @@
-package coderead.test.spring;
+package coderead.test.spring.test;
 
 import coderead.test.services.UserService;
 import com.cbtu.agent.StackSessionBuild;
@@ -25,7 +25,8 @@ public class BasicTest {
         ClassPathXmlApplicationContext context=
                 new ClassPathXmlApplicationContext("spring.xml");
         /*=================测试代码区间结束========================*/
-        stackSession.saveCase("启动容器");
+        stackSession.printStack(System.out);
+//        stackSession.saveCase("启动容器");
     }
 
 

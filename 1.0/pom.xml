@@ -12,6 +12,8 @@
         <module>mybatis</module>
         <module>spring</module>
         <module>common</module>
+        <module>dubbo</module>
+        <module>cache</module>
     </modules>
     <dependencies>
         <dependency>

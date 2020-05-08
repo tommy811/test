@@ -2,8 +2,10 @@ package coderead.test.spring.services;
 
 import coderead.test.beans.User;
 import coderead.test.services.UserService;
+import coderead.test.spring.dao.UserDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author tommy
@@ -18,8 +20,10 @@ public class UserServiceImpl implements UserService  {
     private String name;
 
     @Autowired
-    ApplicationContext context; // 依赖自动注入
+    private UserDaoImpl dao;
 
+    @Autowired
+    ApplicationContext context; // 依赖自动注入
     final ListenerBean listenerBean;
 
     // 构造函数依赖注入
@@ -33,6 +37,15 @@ public class UserServiceImpl implements UserService  {
         User user=new User();
         user.setName(name);
         return user;
+    }
+    @Override
+    @Transactional
+    public User editUserName(Integer id, String newName){
+        User user = dao.getUser(id);
+        user.setName(newName);
+        dao.updateUser(user);
+         user = dao.getUser(id);
+            return user;
     }
 
     public String getName() {

@@ -11,4 +11,6 @@ import coderead.test.beans.User;
  */
 public interface UserService {
      User getUser(Integer id);
+
+     User editUserName(Integer id, String newName);
 }

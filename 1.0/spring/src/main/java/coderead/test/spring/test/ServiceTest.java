@@ -1,4 +1,4 @@
-package coderead.test.spring;
+package coderead.test.spring.test;
 
 import coderead.test.services.UserService;
 import com.cbtu.agent.StackSessionBuild;
@@ -9,29 +9,29 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @author tommy
- * @title: BeanTest
+ * @title: ServiceTest
  * @projectName test
- * @description: Bean实例测试
- * @date 2020/4/48:22 PM
+ * @description: 服务测试
+ * @date 2020/5/56:14 PM
  */
-public class BeanTest {
+public class ServiceTest {
     private ClassPathXmlApplicationContext context;
 
     @Before
-    public void init(){
-         context=
+    public void init() {
+        context =
                 new ClassPathXmlApplicationContext("spring.xml");
     }
 
+    // 声明示事物
     @Test
-    public void getBean(){
-        StackSession stackSession = StackSessionBuild.open();
-        /*=================测试代码区间开始========================*/
+    public void txText() {
         UserService userService = context.getBean(UserService.class);
-        userService.getUser(1);
+        /*=================测试代码区间开始========================*/
+        StackSession stackSession = StackSessionBuild.open();
+        userService.editUserName(10,"鲁班大叔");
+        stackSession.saveCase("执行事物");
         /*=================测试代码区间结束========================*/
-        stackSession.printStack(System.out);
-//        stackSession.saveCase("获取Bean");
-    }
 
+    }
 }

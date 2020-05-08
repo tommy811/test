@@ -5,24 +5,25 @@ import org.apache.ibatis.annotations.*;
 
 import java.util.<a class='class reference' href='/jre/8/java/util/List.java'>List</a>;
 
+@<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/annotations/CacheNamespace.java'>CacheNamespace</a>(blocking=true)
 public interface <span class='class declaration interface  top' name='UserMapper'>UserMapper</span> {
 
     @<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/annotations/Select.java'>Select</a>({" select * from users where id=#{1}"})
-    <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='method declaration' name='selectByid-4B4B5'>selectByid</span>(<a class='class reference' href='/jre/8/java/lang/Integer.java'>Integer</a> <span class='variable declaration' position='249' >id</span>);
+    <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='method declaration' name='selectByid-4B4B5'>selectByid</span>(<a class='class reference' href='/jre/8/java/lang/Integer.java'>Integer</a> <span class='variable declaration' position='280' >id</span>);
 
     @<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/annotations/Select.java'>Select</a>({" select * from users where id=#{1}"})
-    <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='method declaration' name='selectByid2-4B4B5'>selectByid2</span>(<a class='class reference' href='/jre/8/java/lang/Integer.java'>Integer</a> <span class='variable declaration' position='336' >id</span>);
+    <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='method declaration' name='selectByid2-4B4B5'>selectByid2</span>(<a class='class reference' href='/jre/8/java/lang/Integer.java'>Integer</a> <span class='variable declaration' position='367' >id</span>);
 
-    <a class='class reference' href='/jre/8/java/util/List.java'>List</a>&lt;<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a>&gt; <span class='method declaration' name='selectByUser-98B74'>selectByUser</span>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='375' >user</span>);
+    <a class='class reference' href='/jre/8/java/util/List.java'>List</a>&lt;<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a>&gt; <span class='method declaration' name='selectByUser-98B74'>selectByUser</span>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='406' >user</span>);
 
     @<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/annotations/Insert.java'>Insert</a>("INSERT INTO `users`( `name`, `age`, `sex`, `email`, `phone_number`) VALUES ( #{name}, #{age}, #{sex}, #{email}, #{phoneNumber})")
     @<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/annotations/Options.java'>Options</a>(useGeneratedKeys = true, keyProperty = "id")
-    int <span class='method declaration' name='addUser-7A82C'>addUser</span>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='605' >user</span>);
+    int <span class='method declaration' name='addUser-7A82C'>addUser</span>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='636' >user</span>);
 
-    int <span class='method declaration' name='editUser-7A82C'>editUser</span>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='635' >user</span>);
+    int <span class='method declaration' name='editUser-7A82C'>editUser</span>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='666' >user</span>);
 
     @<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/annotations/Delete.java'>Delete</a>("delete from users where id=#{id}")
-    int <span class='method declaration' name='deleteUser-78DDE'>deleteUser</span>(<a class='class reference' href='/jre/8/java/lang/Integer.java'>Integer</a> <span class='variable declaration' position='718' >id</span>);
+    int <span class='method declaration' name='deleteUser-78DDE'>deleteUser</span>(<a class='class reference' href='/jre/8/java/lang/Integer.java'>Integer</a> <span class='variable declaration' position='749' >id</span>);
 
 
 }

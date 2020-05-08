@@ -1,0 +1,36 @@
+package coderead.test.spring.dao;
+
+import coderead.test.beans.<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a>;
+import org.springframework.beans.factory.annotation.<a class='class reference' href='/lib/org.springframework/spring-beans/5.1.0.RELEASE/org/springframework/beans/factory/annotation/Autowired.java'>Autowired</a>;
+import org.springframework.<span class=' unsolved ' name='Cannot resolve symbol 'jdbc''>jdbc</span>.<span class=' unsolved ' name='Cannot resolve symbol 'core''>core</span>.<span class=' unsolved ' name='Cannot resolve symbol 'BeanPropertyRowMapper''>BeanPropertyRowMapper</span>;
+import org.springframework.<span class=' unsolved ' name='Cannot resolve symbol 'jdbc''>jdbc</span>.<span class=' unsolved ' name='Cannot resolve symbol 'core''>core</span>.<span class=' unsolved ' name='Cannot resolve symbol 'JdbcTemplate''>JdbcTemplate</span>;
+import org.springframework.stereotype.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/stereotype/Repository.java'>Repository</a>;
+
+/**
+ * @author tommy
+ * @title: UserDaoImpl
+ * @projectName test
+ * @description: TODO
+ * @date 2020/5/55:16 PM
+ */
+@<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/stereotype/Repository.java'>Repository</a>
+public class <span class='class declaration top' name='UserDaoImpl'>UserDaoImpl</span> {
+
+    @<a class='class reference' href='/lib/org.springframework/spring-beans/5.1.0.RELEASE/org/springframework/beans/factory/annotation/Autowired.java'>Autowired</a>
+    <span class=' unsolved ' name='Cannot resolve symbol 'JdbcTemplate''>JdbcTemplate</span> <span class=' unsolved ' name='Cannot resolve symbol 'jdbcTemplate''>jdbcTemplate</span>;
+
+    public <a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a> <span class='method declaration' name='getUser-337A7'>getUser</span>(<a class='class reference' href='/jre/8/java/lang/Integer.java'>Integer</a> <span class='variable declaration' position='528' >id</span>){
+        <a class='class reference' href='/jre/8/java/lang/String.java'>String</a> <span class='variable declaration' position='548' >sql</span> = "select * from users where id=?";
+        <a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a> <span class='variable declaration' position='601' >user</span> = (<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a>) <span class=' unsolved ' name='Cannot resolve symbol 'jdbcTemplate''>jdbcTemplate</span>.
+                <span class=' unsolved ' name='Cannot resolve symbol 'queryForObject''>queryForObject</span>(<a class='variable access' href='#position=548'>sql</a>, new <span class=' unsolved ' name='Cannot resolve symbol 'BeanPropertyRowMapper''>BeanPropertyRowMapper</span>(<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a>.class), <a class='variable access' href='#position=528'>id</a>);
+        return <a class='variable access' href='#position=601'>user</a>;
+    }
+
+    public void <span class='method declaration' name='updateUser-62CB8'>updateUser</span>(<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java'>User</a> <span class='variable declaration' position='769' >user</span>){
+       <a class='class reference' href='/jre/8/java/lang/String.java'>String</a> <span class='variable declaration' position='790' >sql</span> = "update   users set name=? where id=?";
+       <span class=' unsolved ' name='Cannot resolve symbol 'jdbcTemplate''>jdbcTemplate</span>.<span class=' unsolved ' name='Cannot resolve symbol 'update''>update</span>(<a class='variable access' href='#position=790'>sql</a>,<a class='variable access' href='#position=769'>user</a>.<a class='method invoke' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java#method=getName-B5BA3'>getName</a>(),<a class='variable access' href='#position=769'>user</a>.<a class='method invoke' href='/p/test/1.0/common/src/main/java/coderead/test/beans/User.java#method=getId-0CE9E'>getId</a>());
+    }
+}
+
+
+

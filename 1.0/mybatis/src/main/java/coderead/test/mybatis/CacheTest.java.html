@@ -1,0 +1,49 @@
+package coderead.test.mybatis;
+
+import coderead.test.mybatis.beans.<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a>;
+import org.apache.ibatis.cache.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/cache/Cache.java'>Cache</a>;
+import org.apache.ibatis.session.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/Configuration.java'>Configuration</a>;
+import org.apache.ibatis.session.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a>;
+import org.apache.ibatis.session.<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a>;
+
+
+
+
+
+
+
+
+
+
+public class <span class='class declaration top' name='CacheTest'>CacheTest</span> {
+    private static <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/Configuration.java'>Configuration</a> <span class='field declaration' name='CacheTest.configuration'>configuration</span>;
+
+    static { // 初始化MyBatis
+        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='414' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
+        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='489' >build</span> = <a class='variable access' href='#position=414'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/CrudTest.java'>CrudTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
+        <a class='field access' href='#field=CacheTest.configuration'>configuration</a> = <a class='variable access' href='#position=489'>build</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java#method=getConfiguration-81D04'>getConfiguration</a>();
+    }
+
+
+
+
+    public static void <span class='method declaration' name='main-D63E8'>main</span>(<a class='class reference' href='/jre/8/java/lang/String.java'>String</a>[] <span class='variable declaration' position='675' >args</span>) {
+        // 基于类名称，获取缓存
+        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/cache/Cache.java'>Cache</a> <span class='variable declaration' position='719' >cache</span> = <a class='field access' href='#field=CacheTest.configuration'>configuration</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/Configuration.java#method=getCache-F832A'>getCache</a>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java'>UserMapper</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getName-B5BA3'>getName</a>());
+        <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='792' >user</span> = new <a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=User-AB03C'>User</a>(666, "鲁班大叔");
+        <a class='variable access' href='#position=719'>cache</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/cache/Cache.java#method=putObject-2A610'>putObject</a>(666, <a class='variable access' href='#position=792'>user</a>);// 设置缓存值
+        <a class='variable access' href='#position=719'>cache</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/cache/Cache.java#method=getObject-0BC5E'>getObject</a>(666);// 获取缓存值
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}

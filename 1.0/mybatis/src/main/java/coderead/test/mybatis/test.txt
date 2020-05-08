@@ -1,0 +1,12 @@
+{
+  "codes":[
+    "id=0&className=coderead.test.mybatis.BasicTest&method=getProxyMapperTest&sign=9ED93&line=72&size=1&url=/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/BasicTest.java#method=getProxyMapperTest-9ED93",
+    "id=0.1&className=org.apache.ibatis.session.defaults.DefaultSqlSession&method=getMapper&sign=AA696&line=291&size=1&url=/p/mybatis/3.5.1/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java#method=getMapper-AA696",
+    "id=0.1.1&className=org.apache.ibatis.session.Configuration&method=getMapper&sign=6A338&line=763&size=1&url=/p/mybatis/3.5.1/src/main/java/org/apache/ibatis/session/Configuration.java#method=getMapper-6A338",
+    "id=0.1.1.1&className=org.apache.ibatis.binding.MapperRegistry&method=getMapper&sign=6A338&line=45,46,50&size=1&url=/p/mybatis/3.5.1/src/main/java/org/apache/ibatis/binding/MapperRegistry.java#method=getMapper-6A338",
+    "id=0.1.1.1.1&className=org.apache.ibatis.binding.MapperProxyFactory&method=newInstance&sign=EB969&line=51,52&size=1&url=/p/mybatis/3.5.1/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java#method=newInstance-EB969",
+    "id=0.1.1.1.1.1&className=org.apache.ibatis.binding.MapperProxy&method=<init>&sign=26F52&line=40,44&size=1&url=/p/mybatis/3.5.1/src/main/java/org/apache/ibatis/binding/MapperProxy.java#method=<init>-26F52",
+    "id=0.1.1.1.1.2&className=org.apache.ibatis.binding.MapperProxyFactory&method=newInstance&sign=FFEEA&line=47&size=1&url=/p/mybatis/3.5.1/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java#method=newInstance-FFEEA"
+  ],
+  "name":"获取Mapper实例"
+}

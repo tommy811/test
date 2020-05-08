@@ -19,6 +19,11 @@ public class User implements java.io.Serializable {
     public User() {
     }
 
+    public User(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Integer getId() {
         return id;
     }

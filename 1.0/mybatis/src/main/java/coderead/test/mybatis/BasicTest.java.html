@@ -18,75 +18,88 @@ import org.junit.<a class='class reference' href='/lib/junit/junit/4.12/org/juni
 public class <span class='class declaration top' name='BasicTest'>BasicTest</span> {
 
 
-    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
-    public void <span class='method declaration' name='initTest-9ED93'>initTest</span>() {
-        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
-        /*=================测试代码区间开始========================*/
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='689' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='764' >build</span> = <a class='variable access' href='#position=689'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='#'>BasicTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
-        /*=================测试代码区间结束========================*/
-        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("初始化");
-    }
+        @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+        public void <span class='method declaration' name='initTest-9ED93'>initTest</span>() {
+            <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+            /*=================测试代码区间开始========================*/
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='709' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='788' >build</span> = <a class='variable access' href='#position=709'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='#'>BasicTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
+            /*=================测试代码区间结束========================*/
+            <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("初始化");
+        }
 
-    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
-    public void <span class='method declaration' name='createSession-9ED93'>createSession</span>() {
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='1038' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='1113' >build</span> = <a class='variable access' href='#position=1038'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='#'>BasicTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
+        @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+        public void <span class='method declaration' name='createSession-9ED93'>createSession</span>() {
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='1086' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='1165' >build</span> = <a class='variable access' href='#position=1086'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='#'>BasicTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
 
-        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
-        /*=================测试代码区间开始========================*/
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='1347' >sqlSession</span> = <a class='variable access' href='#position=1113'>build</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java#method=openSession-5B1F5'>openSession</a>(true);
-        /*=================测试代码区间结束========================*/
-        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("创建会话");
-    }
+            <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+            /*=================测试代码区间开始========================*/
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='1411' >sqlSession</span> = <a class='variable access' href='#position=1165'>build</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java#method=openSession-5B1F5'>openSession</a>(true);
+            /*=================测试代码区间结束========================*/
+            <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("创建会话");
+        }
 
-    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
-    public void <span class='method declaration' name='closeSession-9ED93'>closeSession</span>() {
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='1569' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='1644' >build</span> = <a class='variable access' href='#position=1569'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='#'>BasicTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='1753' >sqlSession</span> = <a class='variable access' href='#position=1644'>build</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java#method=openSession-5B1F5'>openSession</a>(true);
+        @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+        public void <span class='method declaration' name='closeSession-9ED93'>closeSession</span>() {
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='1657' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='1736' >build</span> = <a class='variable access' href='#position=1657'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='#'>BasicTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='1849' >sqlSession</span> = <a class='variable access' href='#position=1736'>build</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java#method=openSession-5B1F5'>openSession</a>(true);
 
-        <a class='method invoke' href='#method=select-05168'>select</a>(<a class='variable access' href='#position=1753'>sqlSession</a>);
-        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
-        /*=================测试代码区间开始========================*/
-        <a class='variable access' href='#position=1753'>sqlSession</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java#method=close-9ED93'>close</a>();
-        /*=================测试代码区间结束========================*/
-        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("关闭会话");
-    }
+            <a class='method invoke' href='#method=select-05168'>select</a>(<a class='variable access' href='#position=1849'>sqlSession</a>);
+            <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+            /*=================测试代码区间开始========================*/
+            <a class='variable access' href='#position=1849'>sqlSession</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java#method=close-9ED93'>close</a>();
+            /*=================测试代码区间结束========================*/
+            <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("关闭会话");
+        }
 
-    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
-    public void <span class='method declaration' name='commitSessionTest-9ED93'>commitSessionTest</span>(){
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='2146' >sqlSession</span> = <a class='method invoke' href='#method=buildSession-0C459'>buildSession</a>();
-        <a class='method invoke' href='#method=select-05168'>select</a>(<a class='variable access' href='#position=2146'>sqlSession</a>);
+        @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+        public void <span class='method declaration' name='commitSessionTest-9ED93'>commitSessionTest</span>(){
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='2282' >sqlSession</span> = <a class='method invoke' href='#method=buildSession-0C459'>buildSession</a>();
+            <a class='method invoke' href='#method=select-05168'>select</a>(<a class='variable access' href='#position=2282'>sqlSession</a>);
 
-        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
-        /*=================测试代码区间开始========================*/
-        <a class='variable access' href='#position=2146'>sqlSession</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java#method=commit-9ED93'>commit</a>();;
-        /*=================测试代码区间结束========================*/
-        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("提交会话");
-    }
+            <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+            /*=================测试代码区间开始========================*/
+            <a class='variable access' href='#position=2282'>sqlSession</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java#method=commit-9ED93'>commit</a>();;
+            /*=================测试代码区间结束========================*/
+            <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("提交会话");
+        }
 
-    private void <span class='method declaration' name='select-05168'>select</span>(<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='2501' >sqlSession</span>){
-        <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java'>UserMapper</a> <span class='variable declaration' position='2533' >mapper</span> = <a class='variable access' href='#position=2501'>sqlSession</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java#method=getMapper-46771'>getMapper</a>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java'>UserMapper</a>.class);
-        <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='2595' >user</span> = new <a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=User-9ED93'>User</a>();
-        <a class='variable access' href='#position=2595'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setId-2E203'>setId</a>(10);
-        <a class='variable access' href='#position=2595'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setName-7F5DE'>setName</a>("鲁班大叔");
-        <a class='variable access' href='#position=2595'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setAge-7F5DE'>setAge</a>("38");
-        <a class='variable access' href='#position=2533'>mapper</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java#method=selectByUser-98B74'>selectByUser</a>(<a class='variable access' href='#position=2595'>user</a>);
-    }
+        @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+        public void <span class='method declaration' name='getProxyMapperTest-9ED93'>getProxyMapperTest</span>(){
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='2709' >sqlSession</span> = <a class='method invoke' href='#method=buildSession-0C459'>buildSession</a>();
+            <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+            /*=================测试代码区间开始========================*/
+            <a class='variable access' href='#position=2709'>sqlSession</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java#method=getMapper-46771'>getMapper</a>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java'>UserMapper</a>.class);
+            /*=================测试代码区间结束========================*/
+            <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("获取Mapper实例");
 
-    private void <span class='method declaration' name='update-05168'>update</span>(<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='2772' >sqlSession</span>){
-        
-    }
+        }
 
-    public static <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='method declaration' name='getFactory-6041A'>getFactory</span>(){
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='2884' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
-        <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='2959' >build</span> = <a class='variable access' href='#position=2884'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='#'>BasicTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
-        return <a class='variable access' href='#position=2959'>build</a>;
-    }
-    public static <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='method declaration' name='buildSession-0C459'>buildSession</span>(){
-        return <a class='method invoke' href='#method=getFactory-6041A'>getFactory</a>().<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java#method=openSession-5B1F5'>openSession</a>(true);
-    }
+        private void <span class='method declaration' name='select-05168'>select</span>(<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='3088' >sqlSession</span>){
+            <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java'>UserMapper</a> <span class='variable declaration' position='3124' >mapper</span> = <a class='variable access' href='#position=3088'>sqlSession</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java#method=getMapper-46771'>getMapper</a>(<a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java'>UserMapper</a>.class);
+            <a class='class reference' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java'>User</a> <span class='variable declaration' position='3190' >user</span> = new <a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=User-9ED93'>User</a>();
+            <a class='variable access' href='#position=3190'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setId-2E203'>setId</a>(10);
+            <a class='variable access' href='#position=3190'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setName-7F5DE'>setName</a>("鲁班大叔");
+            <a class='variable access' href='#position=3190'>user</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/beans/User.java#method=setAge-7F5DE'>setAge</a>("38");
+            <a class='variable access' href='#position=3124'>mapper</a>.<a class='method invoke' href='/p/test/1.0/mybatis/src/main/java/coderead/test/mybatis/UserMapper.java#method=selectByUser-98B74'>selectByUser</a>(<a class='variable access' href='#position=3190'>user</a>);
+        }
+
+        private void <span class='method declaration' name='update-05168'>update</span>(<a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='variable declaration' position='3391' >sqlSession</span>){
+
+        }
+
+        public static <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='method declaration' name='getFactory-6041A'>getFactory</span>(){
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java'>SqlSessionFactoryBuilder</a> <span class='variable declaration' position='3507' >factoryBuilder</span> = new <a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=SqlSessionFactoryBuilder-9ED93'>SqlSessionFactoryBuilder</a>();
+            <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java'>SqlSessionFactory</a> <span class='variable declaration' position='3586' >build</span> = <a class='variable access' href='#position=3507'>factoryBuilder</a>.<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactoryBuilder.java#method=build-7722C'>build</a>(<a class='class reference' href='#'>BasicTest</a>.class.<a class='method invoke' href='/jre/8/java/lang/Class.java#method=getResourceAsStream-512DC'>getResourceAsStream</a>("/mybatis-config.xml"));
+            return <a class='variable access' href='#position=3586'>build</a>;
+        }
+        public static <a class='class reference' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSession.java'>SqlSession</a> <span class='method declaration' name='buildSession-0C459'>buildSession</span>(){
+            return <a class='method invoke' href='#method=getFactory-6041A'>getFactory</a>().<a class='method invoke' href='/lib/org.mybatis/mybatis/3.5.1/org/apache/ibatis/session/SqlSessionFactory.java#method=openSession-5B1F5'>openSession</a>(true);
+        }
+
+
 
 
 

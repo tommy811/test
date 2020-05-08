@@ -1,0 +1,37 @@
+package coderead.test.spring.test;
+
+import coderead.test.services.<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java'>UserService</a>;
+import com.<span class=' unsolved ' name='Cannot resolve symbol 'cbtu''>cbtu</span>.<span class=' unsolved ' name='Cannot resolve symbol 'agent''>agent</span>.<span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>;
+import com.<span class=' unsolved ' name='Cannot resolve symbol 'cbtu''>cbtu</span>.<span class=' unsolved ' name='Cannot resolve symbol 'agent''>agent</span>.<span class=' unsolved ' name='Cannot resolve symbol 'jacoco''>jacoco</span>.<span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span>;
+import org.junit.<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Before.java'>Before</a>;
+import org.junit.<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>;
+import org.springframework.context.support.<a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/support/ClassPathXmlApplicationContext.java'>ClassPathXmlApplicationContext</a>;
+
+/**
+ * @author tommy
+ * @title: ServiceTest
+ * @projectName test
+ * @description: 服务测试
+ * @date 2020/5/56:14 PM
+ */
+public class <span class='class declaration top' name='ServiceTest'>ServiceTest</span> {
+    private <a class='class reference' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/support/ClassPathXmlApplicationContext.java'>ClassPathXmlApplicationContext</a> <span class='field declaration' name='ServiceTest.context'>context</span>;
+
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Before.java'>Before</a>
+    public void <span class='method declaration' name='init-9ED93'>init</span>() {
+        <a class='field access' href='#field=ServiceTest.context'>context</a> =
+                new <a class='method invoke' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/support/ClassPathXmlApplicationContext.java#method=ClassPathXmlApplicationContext-7F5DE'>ClassPathXmlApplicationContext</a>("spring.xml");
+    }
+
+    // 声明示事物
+    @<a class='class reference' href='/lib/junit/junit/4.12/org/junit/Test.java'>Test</a>
+    public void <span class='method declaration' name='txText-9ED93'>txText</span>() {
+        <a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java'>UserService</a> <span class='variable declaration' position='681' >userService</span> = <a class='field access' href='#field=ServiceTest.context'>context</a>.<a class='method invoke' href='/lib/org.springframework/spring-context/5.1.0.RELEASE/org/springframework/context/support/AbstractApplicationContext.java#method=getBean-6150C'>getBean</a>(<a class='class reference' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java'>UserService</a>.class);
+        /*=================测试代码区间开始========================*/
+        <span class=' unsolved ' name='Cannot resolve symbol 'StackSession''>StackSession</span> <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span> = <span class=' unsolved ' name='Cannot resolve symbol 'StackSessionBuild''>StackSessionBuild</span>.<span class=' unsolved ' name='Cannot resolve symbol 'open''>open</span>();
+        <a class='variable access' href='#position=681'>userService</a>.<a class='method invoke' href='/p/test/1.0/common/src/main/java/coderead/test/services/UserService.java#method=editUserName-57772'>editUserName</a>(10,"鲁班大叔");
+        <span class=' unsolved ' name='Cannot resolve symbol 'stackSession''>stackSession</span>.<span class=' unsolved ' name='Cannot resolve symbol 'saveCase''>saveCase</span>("执行事物");
+        /*=================测试代码区间结束========================*/
+
+    }
+}
